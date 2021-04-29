@@ -1,0 +1,70 @@
+	
+	
+	/*------------------- Always TRUS regardless of device ----------------------- */
+	body {font-size: 100%;
+		font-family: "Brush Script MT", cursive /* using different font. Picked one that resembles the Github mock up*/
+	}
+
+	header {font-size: 1.75em; /* increases font size of header to 75% bigger than font size defined in body element above*/
+		font-weight: bold; 
+		text-align: center; 
+		margin-top: 2%; /*  move down page a little*/
+	}
+
+	section { background-color: gray;
+		float: left;
+		box-sizing: border-box; 
+		border: solid black 1px; 
+		position: relative; /* This keeps the float elements from stacking overtop of each other. Ie its position is relative to the webpage*/
+		margin-left:1.5%;
+		margin-right:1.5%;
+		margin-top: 2.5%;
+		margin-bottom:2.5%; /* dont think this is needed since the horizontal collapses to higher number anyways*/
+		
+	}
+	
+	h1 {font-size: 1.25em ; /* increases font size of header to 25% bigger than font size defined in body element above*/
+		text-align: center;
+		margin:auto; 
+		box-sizing: border-box; 
+		border: solid black 1px;
+		position: absolute;  /* This along with next two lines is what keeps headers in top right of parent section*/
+		top: 0px; 
+		right: 0px; 
+		width: 33%; 
+
+		
+	}
+	
+	p {padding-top: 3%; /* pushes paragraph down so it doesnt overlap with headings*/
+		padding-left: 2%; /* pushes paragraphs inward so theyre not right up against parent box*/
+		padding-right: 2%;
+	}
+
+	.pink {background-color: pink;} /*I set each h1 class in html file to one of these */
+	.red {background-color: red; color: white;}
+	.yellow{background-color: yellow;}
+
+
+
+/*----------------- Device dependent style --------------------------*/
+/* breakpoints for @media, 992px+(desktop), 768px+ and 991px-(tablet), 767px-(mobile)*/
+	@media (min-width: 992px){
+		.chicken, .beef, .sushi{ width: 30%; } /* I set each section box class in html to one of these. Note that h1 and p update accordingly since widths use %*/
+		.sushilabel{width: 33%;} /*This exists so that sushi header label stays the same width as other two. Specifically created for tablet mode*/
+	}
+
+	@media (min-width: 768px) and (max-width: 991px){
+		.chicken, .beef{width: 47%;}
+		.sushi{ width: 97%; }
+		.sushilabel{width: 16%;} /*Calculates the appropriate % so that its same size as other two. 47/3 = 15.66  -->  15.66/97 = 16.15% */
+	}
+
+	@media (max-width: 767px){
+		.chicken, .beef, .sushi{ width: 97%; }
+		.sushilabel{width: 33%;}
+	}
+
+
+
+
