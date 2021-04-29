@@ -2,7 +2,7 @@
 	
 	/*------------------- Always TRUS regardless of device ----------------------- */
 	body {font-size: 100%;
-		font-family: "Brush Script MT", cursive /* using different font. Picked one that resembles the Github mock up*/
+		font-family: "Brush Script MT", cursive /* using different font*/
 	}
 
 	header {font-size: 1.75em; /* increases font size of header to 75% bigger than font size defined in body element above*/
