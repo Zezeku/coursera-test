@@ -1,0 +1,51 @@
+body{
+	color: #564756;
+}
+
+nav{
+	background-color: #5acca0;
+	
+}
+
+nav > a{
+	color: #564756;
+}
+
+button{
+	color: #e5f7d2;
+}
+
+button:hover, button:focus{
+	color: black;
+}
+
+.nav-item {
+	width: 100%;
+	background-color: #507dba;
+	border: solid #564756 1px;
+}
+
+.nav-link{
+	color: #e5f7d2;
+}
+
+h1{
+	font-size: 1.5em;
+	margin-top: 15px;
+}
+
+#chickenSection{
+	border-radius: 5px;
+	border: solid #5acca0 2px;
+	background-color: #e5f7d2;
+	height: 1500px;
+}
+
+h2{
+	font-size: 1.25em;
+	margin-top: 15px;
+}
+
+p{
+	padding: 0px 25px 0px 25px;
+}
