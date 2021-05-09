@@ -125,9 +125,7 @@ console.log("ajaxUtils.sendGetRequest #2")
 
       console.log(chosenCategoryShortName)
       console.log(chosenCategoryShortName.short_name)
-      console.log("\'" + chosenCategoryShortName.short_name + "\'")
-      
-      var homeHtmlToInsertIntoMainPage = insertProperty( homeHtml, "randomCategoryShortName", "\'" + chosenCategoryShortName.short_name + "\'")
+      var homeHtmlToInsertIntoMainPage = insertProperty( homeHtml, "randomCategoryShortName", chosenCategoryShortName.short_name)
 
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
@@ -163,6 +161,11 @@ dc.loadMenuCategories = function () {
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
+
+  console.log("inside dc.loadMenuItems:" + categoryShort)
+  console.log("request URL:" + menuItemsUrl + categoryShort)
+  console.log("going into buildAndShowMenuItemsHTML() handler response")
+
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort,
     buildAndShowMenuItemsHTML);
@@ -229,6 +232,8 @@ function buildCategoriesViewHtml(categories,
 // from the server
 function buildAndShowMenuItemsHTML (categoryMenuItems) {
   // Load title snippet of menu items page
+console.log("inside buildAndShowMenuItemsHTML: " + categoryMenuItems)
+
   $ajaxUtils.sendGetRequest(
     menuItemsTitleHtml,
     function (menuItemsTitleHtml) {
