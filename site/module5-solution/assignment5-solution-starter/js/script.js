@@ -124,10 +124,11 @@ console.log("ajaxUtils.sendGetRequest #2")
       //a href="#" onclick="$dc.loadMenuItems({{randomCategoryShortName}});">
 
       console.log(chosenCategoryShortName)
-      console.log(homeHtml)
-      console.log(homeHtmlUrl)
       
-      var homeHtmlToInsertIntoMainPage = insertProperty( homeHtml, "randomCategoryShortName", chosenCategoryShortName)
+
+      var homeHtmlToInsertIntoMainPage = insertProperty( homeHtml, "randomCategoryShortName", "'" + chosenCategoryShortName + "'")
+
+      console.log(homeHtml)
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
