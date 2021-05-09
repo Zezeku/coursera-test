@@ -83,9 +83,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // On first load, show home view
 showLoading("#main-content");
 
-console.log("starting project portion")
-console.log("ajaxUtils.sendGetRequest #1")
-
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
@@ -98,7 +95,6 @@ $ajaxUtils.sendGetRequest(
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
 
-console.log("ajaxUtils.sendGetRequest #2")
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl, //this is the problem. it cant use file:// as url. it needs to be hosted on server to view locally. try to view via git hub?
@@ -123,12 +119,7 @@ console.log("ajaxUtils.sendGetRequest #2")
       //
       //a href="#" onclick="$dc.loadMenuItems({{randomCategoryShortName}});">
 
-      console.log(chosenCategoryShortName)
-      
-
       var homeHtmlToInsertIntoMainPage = insertProperty( homeHtml, "randomCategoryShortName", "'" + chosenCategoryShortName + "'")
-
-      console.log(homeHtml)
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
